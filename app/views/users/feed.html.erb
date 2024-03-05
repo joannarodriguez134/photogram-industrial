@@ -17,6 +17,7 @@
 </div>
 </div>
 
-<% @user.leaders.each do |leader| %>
-  <%= render "users/feed", photo: leader, leader: leader %>
+<h2> <%= @user.username %> </h2>
+<% current_user.feed.each do |photo| %>
+  <%= render "photos/photo", photo: photo %>
 <% end %>
