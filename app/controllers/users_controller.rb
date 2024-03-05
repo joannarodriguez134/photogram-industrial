@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   def feed
     @user = User.find_by!(username: params.fetch(:username))
 
-    # to do: view template
    end
 
 
