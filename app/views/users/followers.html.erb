@@ -24,8 +24,10 @@
   </div>
 </div>
 
-
-
-<% @user.followers.each do |followers| %>
-  <%= render "follow_requests/followers", follower: followers %>
-<% end %>
+<ul class="list-group">
+  <% @user.followers.each do |follower| %>
+  <li class="list-group-item">
+     <%= link_to "#{follower.username}", user_path(follower.username), class: "nav-link" %>
+  </li>
+  <% end %>
+</ul>
